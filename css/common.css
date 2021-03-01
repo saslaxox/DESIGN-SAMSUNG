@@ -1,0 +1,39 @@
+/* Text Style */
+@font-face {
+   font-family:'SamsungOneKorean-400';
+   src: url(../font/SamsungOneKorean-400.woff) format('woff2'); font-weight: 400;
+ }
+ @font-face {
+   font-family:'SamsungOneKorean-600';
+   src: url(../font/SamsungOneKorean-600.woff) format('woff2'); font-weight: 600;
+ }
+ 
+ @font-face {
+   font-family:'SamsungOneLatin-400';
+   src: url(../font/SamsungOneLatin-400.woff2) format('woff2'); font-weight: 400;
+ }
+ @font-face {
+   font-family:'SamsungOneLatin-700';
+   src: url(../font/SamsungOneLatin-700.woff2) format('woff2'); font-weight: 700;
+ }
+ 
+ @font-face {
+   font-family:'SamsungSharpSans-Medium';
+   src: url(../font/SamsungSharpSans-Medium.woff) format('woff2'); font-weight: 400;
+ }
+ 
+body {
+   font-family: "Samsungonelatin-400", "Malgun Gothic", arial, Helvetica, sans-serif;
+   font-size: 12px;
+   line-height: 1.3;
+   color: rgb(0,0,0);
+}
+
+h1 {
+   font-family:"SamsungSharpSans-Medium"; 
+   font-size: 24px; 
+   letter-spacing: normal; 
+   color: rgb(0,0,0);
+   -webkit-font-smoothing: antialiased;
+ }
+ 

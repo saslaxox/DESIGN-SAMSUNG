@@ -1,0 +1,21 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+a {
+   text-decoration: none;
+}
+
+ol, ul ,li, dl {
+   list-style:none;
+   list-style-type:none;
+}
+
+button {
+   border: 0;
+   background: none;
+   cursor: pointer;
+}
+
+div, ul, li {
+   background-size: cover;
+   background-repeat: no-repeat;
+}

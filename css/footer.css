@@ -1,0 +1,34 @@
+.footer_wrap {
+   width: 100%;
+   height: 61px;
+}
+.footer {
+   padding: 24px 3.75% 0;
+}
+.footer_wrap .footer .footer_logo {
+   display: inline-block;
+   width: 91px;
+   height: 14px;
+   vertical-align: middle;
+   background-image: url("../img/footer_logo.png");
+   background-position: 0 0;
+   background-size: contain;
+   margin-right: 12px;
+}
+.footer a {
+   font-family: "SamsungOneKorean-400";
+   font-size: 14px;
+   letter-spacing : -0.08em;
+   text-decoration: underline;
+   color: rgb(136, 136, 136);
+}
+.footer span {
+   font-family: "SamsungOneLatin-400";
+   font-size: 14px;
+   letter-spacing : -0.02em;
+   color: rgb(136, 136, 136);
+}
+.footer .vertical {
+   margin: 0 7px;
+}
+
