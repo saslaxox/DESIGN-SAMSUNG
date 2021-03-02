@@ -5,12 +5,26 @@ main {
 
 /* Hero */
 
-.hero_wrap .hero_img {
+.hero_wrap .hero_box {
+   position: relative;
    width: 100%;
-   height: 474.25px;
-   background-image: url(../img/hero_img.jpg);
+   padding-top:  33.28125%;
+   display: block;
 }
-.here_txt {
+
+.hero_wrap .hero_box video {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.hero_box .m_video {
+   display: none;
+}
+
+.hero_txt {
    padding: 30px 4% 120px;
    position: relative;
 }
@@ -22,7 +36,7 @@ main {
    color: rgb(0,0,0);
 }
 .subtitle {
-   font-family: "SamsungOneLatin-400";
+   font-family: "SamsungOneKorean-400";
    font-size: 28px;
    font-weight: 400;
    letter-spacing: -0.42px;
@@ -50,7 +64,6 @@ main {
    flex-wrap: wrap;
 }
 
-
 .list_box {
    width: 30%;
    margin: 0 0.625%;
@@ -63,9 +76,33 @@ main {
    margin-right: 3.75%;
 }
 
+.component_list .list_box .list{
+   position: relative;
+   padding-top: 56.25%;
+} 
+
 .list_box a div {
+   position: absolute;
+   left: 0;
+   top: 0;
    width: 100%;
-   height: 240.47px;
+   padding-top: inherit;
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   transition: transform .6s;
+}
+
+.list_box a:hover div {
+   transform: scale(1.1);
+}
+
+.component_list .list_box dl .item_img {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   padding-top: inherit;
+   overflow: hidden;
 }
 
 .list_box a .list_1 {
@@ -181,4 +218,146 @@ main {
    letter-spacing: 0.06em;
    padding: 10px 40px;
    margin: 0 auto;
+}
+
+/* 반응형 추가 */
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+
+   .hero_txt {
+      margin: 0vw 1.25vw;
+      padding-top: 2.34375vw;
+      padding-bottom: 9.375vw;;
+   }
+   .title {
+      font-size: 3.75vw;
+      letter-spacing: -0.015em;
+   }
+   .subtitle {
+      padding-top: 1.5625vw;
+      font-size: 2.1875vw;
+      letter-spacing: -0.015em;
+   }
+   .day {
+      font-size: 0.9375vw;
+   }
+
+   /*  Main list */
+
+   .component_list .list_box {
+      padding: 0 0 6.25vw 0;
+   }
+
+   .list_box dl .title {
+      font-size: 2.34375vw;
+      line-height: 1.2;
+      padding: 2.03125vw 1.25vw 0 1.25vw;
+   }
+   .list_box dl .desc {
+      font-size: 1.40625vw;
+      line-height: 1.22222;
+      padding: 1.09375vw 1.25vw 0 1.25vw;
+   }
+   .list_box dl .date {
+      font-size: 0.9375vw;
+      line-height: 1;
+      padding: 1.40625vw 1.25vw 0 1.25vw;
+   }
+
+}
+
+
+
+@media only screen and (max-width: 767.7px) {
+
+   .hero_wrap {
+      height: auto;
+  }
+   .hero_box {
+      width: 100%;
+      padding-top: 12.8vw;
+      min-height: 100vh;
+      /* position: relative; */
+
+   }
+
+
+   /* .m_video에 양옆 여백이 생기는데 대체 이유가 뭘까요?
+    이것저것 해보느라 주석이 좀 있습니다 */
+   .hero_wrap .hero_box .m_video {
+      /* position: absolute; */
+      display: block;
+      /* width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0; */
+   }
+   .hero_box .pc_video {
+      display: none;
+   }
+   .here_txt {
+      margin: 0vw 4vw;
+   }
+
+   .title {
+      font-size: 10.66667vw;
+      line-height: 1.15;
+   }
+   .subtitle {
+      
+      padding-top: 3.73333vw;
+      font-size: 4.8vw;
+      line-height: 1.16667;
+   }
+   .day {
+      font-size: 3.73333vw;
+      position: static;  /* 앞서 설정되어있는 position값을 무시 */
+      padding-top: 5.06667vw;
+   }
+
+   .main_list_wrap {
+      padding-top: 6.66667vw;
+   }
+
+   .component_list .list_box {
+      display: block;
+      width: 392%;
+      margin: 0 4%;
+      padding-bottom: 26.13333vw;
+   }
+   .component_list li:nth-child(3n+1) {
+      margin-left: 4%;
+   }
+   .component_list li:nth-child(3n+3) {
+      margin-right: 4%;
+   }
+
+
+   .list_box dl dt.title {
+      padding: 6.93333vw 4vw 0vw;
+      font-size: 7.46667vw;
+      line-height: 1.14286;
+   }
+   .list_box dl dd.desc {
+      padding: 2.66667vw 4vw 0vw;
+      font-size: 4.8vw;
+      line-height: 1.33333;
+   }
+   .list_box dl dd.date {
+      padding: 2.66667vw 4vw 0vw;
+      font-size: 3.73333vw;
+   }
+   .main_list_more {
+      padding: 0 4% 20vw;
+   }
+
+   .main_list_more .line , .line:before{
+      height: 5.33333vw;
+   }
+
+   .main_list_more .more {
+      font-size: 3.73333vw;
+      margin: 2.66667vw 5.33333vw;
+   }
+
 }
