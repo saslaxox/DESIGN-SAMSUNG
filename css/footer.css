@@ -32,3 +32,66 @@
    margin: 0 7px;
 }
 
+
+/* 반응형 추가 */
+
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) {
+
+   .footer {
+      padding-top: 1.875vw;
+      display: flex;
+   }
+   .footer_wrap {
+      height: 4.76562vw;
+      position: relative;
+      width: 100%;
+      background-color: #fff;
+   }
+   .footer_wrap .footer a.footer_logo {
+      margin-right: 1.09375vw;
+      width: 7.10938vw;
+      height: 1.09375vw;
+   }
+   .footer_wrap div span.copyright {
+      font-size: 1.09375vw;
+   }
+
+   .footer span.vertical, .footer_info a {
+      font-size: 1.09375vw;
+   }
+
+}
+
+
+@media only screen and (max-width: 767.7px) {
+   
+   .footer {
+      padding-top: 3.2vw;
+      padding-left: 4%;
+      padding-bottom: 4%;
+   }
+   .footer_wrap div a.footer_logo {
+      width: 17.73333vw;
+      height: 2.8vw;
+      background-image: url(../img/footer_logox2.png);
+   }
+   .footer_wrap div span.copyright {
+      display: block;
+      font-size: 3.2vw;
+      margin-top: 3.2vw;
+      font-family: 'SamsungOneLatin-700';
+   }
+   .footer_wrap div span:nth-child(3) {
+      display: none;
+   }
+
+   .footer_wrap div .footer_info {
+      margin-top: 2.93333vw;
+   }
+
+   .footer_wrap div .footer_info a {
+      font-size: 2.93333vw;
+   }
+
+}
+

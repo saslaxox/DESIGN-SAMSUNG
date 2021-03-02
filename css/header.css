@@ -8,14 +8,22 @@ header {
 .header_wrap {
    width: 100%;
    height: 70px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 9999;
+}
+.header_wrap .header1 {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(255,255,255);
    display: flex;
-   justify-content: space-between;
-   vertical-align: middle;
    align-items: center;
-   position: relative;
 }
 
 .header_logo {
+   width: 100%;
    position: absolute;
    left: 4%;   
 }
@@ -32,6 +40,7 @@ header {
 }
 
 .logo {
+   display: block;
    background-size: 230px 31px;
    background-image: url(../img/logo.png);
 }
@@ -85,15 +94,18 @@ header {
 
 /* Header 2 */
 .category_arear_wrap {
-   width: 100%;
-   height: 62px;
+   padding: 70px 0 26px 0;
+   width: 650px;
+   position: relative;
+   margin: 0 auto;
+   display: block;
+   text-align: center;
+   background-color: rgb(255,255,255);
 }
 
 .category_arear_box {
-   width: 650px;
-   height: 62px;
-   margin: 0 auto;
-   background-color: rgb(255,255,255);
+   height: 36px;
+   align-items: center;
 }
 
 .category_box {
@@ -144,4 +156,136 @@ header {
    width: 6px;
    height: 100%;
    margin-left: -3px;
+}
+
+/* 반응형 추가 */
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+
+   .header_wrap {
+      height: 5.46875vw;
+   }
+   .header_logo {
+      top: 1.48438vw;
+   }
+   .logo {
+      background-size: 17.96875vw 2.42188vw;
+   }
+   .header_slogan_holder {
+      width: 28.75vw;
+   }
+   .header_slogan_holder h1 {
+      background-size: 28.75vw 1.875vw;
+   }
+
+   .search, .util_search a {
+      width: 1.5625vw;
+      height: 1.5625vw;
+      top: 0;
+      right: 4.6875vw;
+   }
+   .lang, .util_lang {
+      width: 2.57812vw;
+      height: 1.5625vw;
+   }
+   .lang {
+      background-size: 1.5625vw 1.5625vw;
+   }
+   .header_util .util_lang .lang::after {
+      width: 0.39062vw;
+      height: 0.23438vw;
+      margin-top: 0.70312vw;
+   }
+
+   /* Header 2 */
+   .category_box {
+      height: 2.8125vw;
+      padding-top: 0px;
+   }
+   .category_box li a {
+      font-size: 1.40625vw;
+   }
+
+   .category_arear_wrap {
+      padding: 6.03125vw 0 0px 0;
+   }
+
+  .btn_top {
+      margin-bottom: 1.25%;
+      margin-right: 1.25%;
+      width: 5.46875vw;
+   }  
+   .btn_top span {
+      width: 100%;
+      padding-top: 100%;
+   }
+   .btn_top span:before {
+      width: .46875vw;
+      margin-left: -.23438vw;
+   }
+
+}
+
+@media only screen and (max-width: 767.7px) {
+
+   .header_wrap {
+      height:12.8vw;
+   }
+   .header_slogan_holder{
+      display: none;
+   }
+   .header_logo a div {
+      width: 42.26667vw;
+      height: 5.86667vw;
+   }
+   .logo {
+      background-size: 100%;
+      background-image: url(../img/logox2.png);
+   }
+   .header_util {
+      top: 4vw;
+      padding: 0 0 0 0;
+   }
+   .util_lang {
+      display: none;
+   }
+   .util_search .search {
+      height: 4.93333vw;
+      right: 10.66667vw;
+   }
+   .search, .util_search a {
+      width: 4.9vw;
+      height: 4.8vw;
+   }
+   .search {
+      background-image: url(../img/searchx2.png);
+      background-position: 0 50%;
+      background-size: 100% auto;
+   }
+   .category_arear_wrap {
+      display: none;
+   }
+   .header_util .burger {
+      background-image: url(../img/burgerx2.png);
+      width: 4.8vw;
+      height: 4.8vw;
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: 100% auto;
+      display: inline-block;
+   }
+   .btn_top {
+      width: 92.3px;
+   }
+   .header_wrap .btn_top {
+      margin-bottom: 2vw;
+      margin-right: 2vw;
+      width: 12vw;
+   }  
+   .btn_top span:before {
+      width: 1.06667vw;
+      margin-left: -.53333vw;
+      background-image: url(../img/arrow_top_m.png);
+   }
+
 }
